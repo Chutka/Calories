@@ -1,0 +1,19 @@
+.banner {
+	width: 100%;
+	text-align: center;
+	background-color: #f1e694;
+	position: fixed;
+	top: -10px;
+	z-index: -1000;
+}
+
+.banner img {
+	width: 50%;
+	height: auto;
+}
+.main {
+	background-color: #000;
+	position: relative;
+	top: 380px;
+	background-color: #fff;
+}
