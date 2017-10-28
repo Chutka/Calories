@@ -1,6 +1,8 @@
-
 var express = require('express');
 var app = express();
+
+var main = require('./main');//router
+
 
 var fs = require('fs');
 app.engine('html', function (filePath, options, callback) {
@@ -8,19 +10,17 @@ app.engine('html', function (filePath, options, callback) {
     if (err) return callback(new Error(err));
     
     var rendered =content.toString();
-    console.log(content.toString());
     return callback(null, rendered);
   });
 });
 
-app.set('views', '../'); 
+app.set('views', '../templates'); 
 app.set('view engine', 'html'); 
 
-app.get('/', function (req, res) {
-  res.render('index');
-});
+app.use('/aa',main);
 
-app.listen(3000, function () {
+
+app.listen(8080, function () {
   console.log('Example app listening on port 3000!');
 });
 
