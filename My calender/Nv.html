@@ -6,21 +6,21 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <body>
 <h1>Календарь</h1>
-<div class="container">
-  <div class="row">
-<div class="col-2"></div>
- <div class="col-8">
-<table><caption>Октябрь</caption>
-	<tr>
-		<th>Пн</th>
-		<th>Вт</th>
-		<th>Ср</th>
-		<th>Чт</th>
-		<th>Пт</th>
-		<th>Сб</th>
-		<th>Вс</th>
-	</tr>
-	<tr>
+<table><caption>Месяц</caption>
+	<thead>
+		<tr>
+			<th>Пн</th>
+			<th>Вт</th>
+			<th>Ср</th>
+			<th>Чт</th>
+			<th>Пт</th>
+			<th>Сб</th>
+			<th>Вс</th>
+		</tr>
+	</thead>
+
+	<tbody id="tbody"></tbody>
+	<!-- <tr>
 	<td class="weekdays">1</td>
 		<td class="weekdays">2</td>
 		<td class="weekdays">3</td>
@@ -64,18 +64,9 @@
 		<td class="weekdays"></td>
 		<td class="weekend"></td>
 		<td class="weekend"></td>
-	</tr>
+	</tr> -->
 </table>
-</div>
-<div class="col-2"></div>
-</div>
-</div>
 <style>
-caption {
-    caption-side:top;
-    color: #FFA500;
-    text-align: center;
-}
 h1 {
 color: #611ad2;
 text-shadow:2px 2px 0 #cccccc;
@@ -87,24 +78,33 @@ padding: 5px 10px;
 margin: 10px 0;
 background-color: green
 }
+table{
+	width: 100%;
+}
 table,th,td {
 	font-size: 30px;
-	padding: 10px;
-	padding-right: 50px;
-	text-align:center;vertical-align:middle;
+	padding: 20px;
+	padding-right: 100px;
+	text-align:center;
+	vertical-align:middle;
 	border: 2px solid grey;
+}
+caption {
+    caption-side:top;
+    color: grey;
+    text-align: center;
 }
 th{
 	background-color:#E0E6FA;
 }
 .weekend {
-	background-color:#77ff70;
+	background-color: lightgray;
 }
 .weekdays{
-	background-color:#ff70a5;
+	background-color:white;
 }
 </style>
-
+<script type="text/javascript" src="./js.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
