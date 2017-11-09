@@ -1,15 +1,12 @@
-var tb = document.getElementById('tbody');
+function calendar(address){
+var tb = document.getElementById(address);
 var a = new Date();
-var now = new Date(a.getFullYear(), a.getMonth()+1);
+var now = new Date(a.getFullYear(), a.getMonth());
 var to1 = ((now.getDay()+6)%7+1);
-console.log((now.getDay()+6)%7+1);
 var d = new Date(now.getFullYear(), now.getMonth()+1);
 d.setDate(0);
 var end = d.getDate();
-console.log(end);
-
-
-for(var i = 0; i < 6; i++){
+for(var i = 0; i < 5; i++){
 	var tr = document.createElement('tr');
 	for(var j = 0; j < 7; j++){
 		var td = document.createElement('td');
@@ -28,6 +25,13 @@ for(var i = 0; i < 6; i++){
 	}
 	tb.appendChild(tr);
 }
-
-
-console.log(tb)
+}
+function titleCalendar(address){
+var a = new Date();
+var now = new Date(a.getFullYear(), a.getMonth());
+var month = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июнь','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+var cap = document.getElementById(address);
+cap.innerHTML = month[now.getMonth()];
+}
+calendar('tbody');
+titleCalendar('caption');
