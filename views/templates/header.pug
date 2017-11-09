@@ -12,12 +12,12 @@ html(lang="en")
   body
   nav(class='navbar navbar-expand-md navbar-dark bg-dark')
     a(class='navbar-brand' href='#') C
-    div
+    div(class='collapse navbar-collapse')
       ul(class='navbar-nav mr-auto')
         li(class='nav-item active')
           a(class='nav-link' href='#') Главная
         li(class='nav-item')
-          a(class='nav-item' href='#') Календарь
+          a(class='nav-link' href='#') Календарь
       ul(class='navbar-nav mr-right')
         li(class='nav-item')
           a(class='nav-link' href='#') Регистрация
@@ -37,3 +37,24 @@ html(lang="en")
               class='d-flex flex-column'
               acrion='#'
             )
+              div(class='form-group')
+                label(for='imputEmail') Почта
+                input(
+                  class='form-control'
+                  id='inputEmail'
+                  type='test'
+                  placeholder='Введите пароль'
+                )
+              div(class='form-group')
+                label(for='inputPassword') Пароль
+                input(
+                  class='form-control'
+                  id='inputPassword'
+                  type='password'
+                  placeholder='Введите пароль'
+                )
+              button(
+                class='btn btn-primary'
+                type='submit'
+              ) Войти
+              a(href='#') Забыли пароль?
