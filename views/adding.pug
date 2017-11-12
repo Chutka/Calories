@@ -1,0 +1,55 @@
+include templates/header.pug
+div.container-fluid
+  div.row
+    nav.col-sm-3.col-md-2.d-none.d-sm-clock.bg-loght.sidebar
+      ul.nav.nav-pills.flex-column
+        li.nav-item
+          a.nav-link.active(href='#') Overview
+        li.nav-item
+          a.nav-link.active(href='#') Overview
+        li.nav-item
+          a.nav-link.active(href='#') Overview
+        li.nav-item
+          a.nav-link.active(href='#') Overview
+    main.col-sm-9.ml-sm-auto.col-md-10.pt-3(role='main')
+      h1 Расписание на день
+      div.table-responsive
+        table.table.table-striped
+          thead
+            tr
+              th #
+              th Название
+              th Кол-во
+              th Колории
+          tbody#t_body
+      div.d-flex.justify-content-between
+        button.btn.btn-success Подтвердить
+        button.btn.btn-secondary Добавить
+      hr
+      div.flex-colunm.align-items-center.mt-4#block__add
+        div.col-10.block__add
+          div.form-group
+            label(for='name') Название продукта
+            input.form-control#name(
+              type='text'
+              aria-descriptedby='nameHelper'
+              placeholder='Название'
+            )
+          div.form-group
+            label(for='count') Кол-во продукта
+            input.form-control#count(
+              type='text'
+              aria-descriptedby='countHelper'
+              placeholder='Кол-во'
+            )
+          div.form-group
+            label(for='colories') Кол-во колорий в 100г
+            input.form-control#count(
+              type='text'
+              aria-descriptedby='countHelper'
+              placeholder='Кол-во'
+            )
+          button.btn.btn-success#button__add(
+            type='submit'
+          ) Добавить
+include templates/footer.pug
